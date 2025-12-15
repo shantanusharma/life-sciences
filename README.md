@@ -64,8 +64,6 @@ Access academic research and publications from Wiley's Scholar Gateway.
 
 **Requirements**: Free Scholar Gateway account
 
-### Local MCP Servers (MCPB)
-
 #### Benchling
 **Plugin ID**: `benchling-mcp@life-sciences`
 
@@ -74,7 +72,9 @@ Access Benchling notebooks, entries, schemas, and more.
 **Requirements**:
 - Benchling account with Benchling AI, API access, and "Ask" functionality enabled
 - API key (generate from Benchling Settings)
-- Benchling tenant URL
+- Benchling subdomain (your tenant's subdomain, e.g., `mycompany` for `mycompany.benchling.com`)
+
+### Local MCP Servers (MCPB)
 
 #### 10x Genomics Cloud
 **Plugin ID**: `10x-genomics@life-sciences`
@@ -109,9 +109,9 @@ Automated quality control workflow for single-cell RNA-seq data following scvers
 /plugin install biorender@life-sciences
 /plugin install synapse@life-sciences
 /plugin install wiley-scholar-gateway@life-sciences
+/plugin install benchling-mcp@life-sciences
 
 # Local MCP servers (require configuration)
-/plugin install benchling-mcp@life-sciences
 /plugin install 10x-genomics@life-sciences
 
 # Skills (no configuration needed)
