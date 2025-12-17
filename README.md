@@ -3,7 +3,7 @@
 This marketplace provides MCP (Model Context Protocol) servers and skills for life sciences tools. Install these plugins to access specialized research and analysis tools directly within Claude Code.
 
 **What's included:**
-- **MCP Servers**: Connect to external services like PubMed, BioRender, Benchling, and more
+- **MCP Servers**: Connect to external services like PubMed, BioRender, Synapse, and more
 - **Skills**: Domain-specific workflows and analysis capabilities that extend Claude's expertise
 
 ## Quick Start
@@ -17,7 +17,6 @@ This marketplace provides MCP (Model Context Protocol) servers and skills for li
 /plugin install biorender@life-sciences
 /plugin install synapse@life-sciences
 /plugin install wiley-scholar-gateway@life-sciences
-/plugin install benchling-mcp@life-sciences
 /plugin install 10x-genomics@life-sciences
 
 # Install skills
@@ -64,16 +63,6 @@ Access academic research and publications from Wiley's Scholar Gateway.
 
 **Requirements**: Free Scholar Gateway account
 
-#### Benchling
-**Plugin ID**: `benchling-mcp@life-sciences`
-
-Access Benchling notebooks, entries, schemas, and more.
-
-**Requirements**:
-- Benchling account with Benchling AI, API access, and "Ask" functionality enabled
-- API key (generate from Benchling Settings)
-- Benchling subdomain (your tenant's subdomain, e.g., `mycompany` for `mycompany.benchling.com`)
-
 ### Local MCP Servers (MCPB)
 
 #### 10x Genomics Cloud
@@ -109,7 +98,6 @@ Automated quality control workflow for single-cell RNA-seq data following scvers
 /plugin install biorender@life-sciences
 /plugin install synapse@life-sciences
 /plugin install wiley-scholar-gateway@life-sciences
-/plugin install benchling-mcp@life-sciences
 
 # Local MCP servers (require configuration)
 /plugin install 10x-genomics@life-sciences
@@ -137,7 +125,7 @@ Restart to activate the MCP servers.
 
 - **No authentication**: PubMed
 - **Free account required**: BioRender, Synapse, Wiley Scholar Gateway
-- **Paid/institutional account**: Benchling (requires tenant with specific features), 10x Genomics (requires data in account to be useful)
+- **Paid/institutional account**: 10x Genomics (requires data in account to be useful)
 
 ## Support
 
@@ -148,3 +136,7 @@ For issues with:
 ## License
 
 Individual MCP servers are licensed by their respective providers. See each provider's terms of service for details.
+
+## Removed Plugins
+
+- **Benchling**: Removed because Benchling uses tenant-specific URLs which are not supported by the plugin system.
