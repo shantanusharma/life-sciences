@@ -6,16 +6,9 @@
   },
   "metadata": {
     "version": "1.0.0",
-    "description": "MCP servers for life sciences research tools including Benchling, 10x Genomics, PubMed, BioRender, Synapse, and Wiley Scholar Gateway"
+    "description": "MCP servers for life sciences research tools including 10x Genomics, PubMed, BioRender, Synapse, and Wiley Scholar Gateway"
   },
   "plugins": [
-    {
-      "name": "benchling-mcp",
-      "source": "./benchling",
-      "description": "Benchling MCP server for accessing notebooks, entries, schemas, and more",
-      "category": "life-sciences",
-      "tags": ["biotech", "research", "notebooks"]
-    },
     {
       "name": "10x-genomics",
       "source": "./10x-genomics",
