@@ -1,0 +1,15 @@
+{
+  "name": "clinical-trials",
+  "version": "1.0.0",
+  "description": "Clinical Trials MCP server for searching and accessing clinical trial data",
+  "author": {
+    "name": "DeepSense.AI",
+    "url": "https://deepsense.ai"
+  },
+  "mcpServers": {
+    "ClinicalTrials": {
+      "type": "http",
+      "url": "https://mcp.deepsense.ai/clinical_trials/mcp"
+    }
+  }
+}

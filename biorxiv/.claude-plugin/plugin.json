@@ -1,0 +1,15 @@
+{
+  "name": "biorxiv",
+  "version": "1.0.0",
+  "description": "bioRxiv MCP server for searching preprints in biology and life sciences",
+  "author": {
+    "name": "DeepSense.AI",
+    "url": "https://deepsense.ai"
+  },
+  "mcpServers": {
+    "bioRxiv": {
+      "type": "http",
+      "url": "https://mcp.deepsense.ai/biorxiv/mcp"
+    }
+  }
+}

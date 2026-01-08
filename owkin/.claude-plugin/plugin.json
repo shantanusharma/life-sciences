@@ -1,0 +1,15 @@
+{
+  "name": "owkin",
+  "version": "1.0.0",
+  "description": "Owkin MCP server for AI-powered drug discovery and precision medicine tools",
+  "author": {
+    "name": "Owkin",
+    "url": "https://owkin.com"
+  },
+  "mcpServers": {
+    "Owkin": {
+      "type": "http",
+      "url": "https://mcp.k.owkin.com/mcp"
+    }
+  }
+}

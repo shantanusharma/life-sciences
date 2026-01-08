@@ -1,0 +1,15 @@
+{
+  "name": "open-targets",
+  "version": "1.0.0",
+  "description": "Open Targets MCP server for accessing drug target identification and validation data",
+  "author": {
+    "name": "Open Targets",
+    "url": "https://www.opentargets.org"
+  },
+  "mcpServers": {
+    "OpenTargets": {
+      "type": "http",
+      "url": "https://mcp.platform.opentargets.org/mcp"
+    }
+  }
+}

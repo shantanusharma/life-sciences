@@ -6,7 +6,7 @@
   },
   "metadata": {
     "version": "1.0.0",
-    "description": "MCP servers for life sciences research tools including 10x Genomics, PubMed, BioRender, Synapse, and Wiley Scholar Gateway"
+    "description": "MCP servers for life sciences research tools including 10x Genomics, PubMed, BioRender, Synapse, Wiley Scholar Gateway, bioRxiv, Clinical Trials, ChEMBL, Owkin, and Open Targets"
   },
   "plugins": [
     {
@@ -43,6 +43,41 @@
       "description": "Scholar Gateway MCP server by Wiley for accessing academic research and publications",
       "category": "life-sciences",
       "tags": ["research", "academic", "publications"]
+    },
+    {
+      "name": "biorxiv",
+      "source": "./biorxiv",
+      "description": "bioRxiv MCP server for searching preprints in biology and life sciences",
+      "category": "life-sciences",
+      "tags": ["research", "preprints", "biology"]
+    },
+    {
+      "name": "clinical-trials",
+      "source": "./clinical-trials",
+      "description": "Clinical Trials MCP server for searching and accessing clinical trial data",
+      "category": "life-sciences",
+      "tags": ["clinical-trials", "research", "medical"]
+    },
+    {
+      "name": "chembl",
+      "source": "./chembl",
+      "description": "ChEMBL MCP server for accessing bioactive molecule and drug discovery data",
+      "category": "life-sciences",
+      "tags": ["drug-discovery", "chemistry", "bioactive-molecules"]
+    },
+    {
+      "name": "owkin",
+      "source": "./owkin",
+      "description": "Owkin MCP server for AI-powered drug discovery and precision medicine tools",
+      "category": "life-sciences",
+      "tags": ["ai", "drug-discovery", "precision-medicine"]
+    },
+    {
+      "name": "open-targets",
+      "source": "./open-targets",
+      "description": "Open Targets MCP server for accessing drug target identification and validation data",
+      "category": "life-sciences",
+      "tags": ["drug-targets", "genomics", "research"]
     },
     {
       "name": "single-cell-rna-qc",
