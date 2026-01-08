@@ -1,9 +1,9 @@
 {
   "name": "biorxiv",
   "version": "1.0.0",
-  "description": "bioRxiv MCP server for searching preprints in biology and life sciences",
+  "description": "Access to bioRxiv and medRxiv preprint data. The bioRxiv Connector gives Claude access to bioRxiv and medRxiv preprint servers, hosting research papers in biological and medical sciences posted before peer review.",
   "author": {
-    "name": "DeepSense.AI",
+    "name": "deepsense.ai",
     "url": "https://deepsense.ai"
   },
   "mcpServers": {

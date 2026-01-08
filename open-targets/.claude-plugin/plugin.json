@@ -1,9 +1,9 @@
 {
   "name": "open-targets",
   "version": "1.0.0",
-  "description": "Open Targets MCP server for accessing drug target identification and validation data",
+  "description": "Drug target discovery and prioritisation platform. The Open Targets Platform is a comprehensive tool that supports systematic identification and prioritisation of potential therapeutic drug targets, integrating publicly available datasets to build and score target-disease associations.",
   "author": {
-    "name": "Open Targets",
+    "name": "OpenTargets",
     "url": "https://www.opentargets.org"
   },
   "mcpServers": {

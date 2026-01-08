@@ -1,9 +1,9 @@
 {
   "name": "clinical-trials",
   "version": "1.0.0",
-  "description": "Clinical Trials MCP server for searching and accessing clinical trial data",
+  "description": "Access ClinicalTrials.gov data. The Clinical Trials Connector gives Claude access to ClinicalTrials.gov, the NIH/NLM registry of FDA-regulated clinical studies conducted worldwide.",
   "author": {
-    "name": "DeepSense.AI",
+    "name": "deepsense.ai",
     "url": "https://deepsense.ai"
   },
   "mcpServers": {

@@ -47,37 +47,37 @@
     {
       "name": "biorxiv",
       "source": "./biorxiv",
-      "description": "bioRxiv MCP server for searching preprints in biology and life sciences",
+      "description": "Access to bioRxiv and medRxiv preprint data",
       "category": "life-sciences",
-      "tags": ["research", "preprints", "biology"]
+      "tags": ["research", "preprints", "biology", "medical"]
     },
     {
       "name": "clinical-trials",
       "source": "./clinical-trials",
-      "description": "Clinical Trials MCP server for searching and accessing clinical trial data",
+      "description": "Access ClinicalTrials.gov data",
       "category": "life-sciences",
-      "tags": ["clinical-trials", "research", "medical"]
+      "tags": ["clinical-trials", "research", "medical", "fda"]
     },
     {
       "name": "chembl",
       "source": "./chembl",
-      "description": "ChEMBL MCP server for accessing bioactive molecule and drug discovery data",
+      "description": "Access to the ChEMBL Database",
       "category": "life-sciences",
-      "tags": ["drug-discovery", "chemistry", "bioactive-molecules"]
+      "tags": ["drug-discovery", "chemistry", "bioactive-molecules", "bioactivity"]
     },
     {
       "name": "owkin",
       "source": "./owkin",
-      "description": "Owkin MCP server for AI-powered drug discovery and precision medicine tools",
+      "description": "Interact with AI agents built for biology",
       "category": "life-sciences",
-      "tags": ["ai", "drug-discovery", "precision-medicine"]
+      "tags": ["ai", "drug-discovery", "precision-medicine", "histopathology"]
     },
     {
       "name": "open-targets",
       "source": "./open-targets",
-      "description": "Open Targets MCP server for accessing drug target identification and validation data",
+      "description": "Drug target discovery and prioritisation platform",
       "category": "life-sciences",
-      "tags": ["drug-targets", "genomics", "research"]
+      "tags": ["drug-targets", "genomics", "research", "therapeutics"]
     },
     {
       "name": "single-cell-rna-qc",

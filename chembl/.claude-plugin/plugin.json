@@ -1,9 +1,9 @@
 {
   "name": "chembl",
   "version": "1.0.0",
-  "description": "ChEMBL MCP server for accessing bioactive molecule and drug discovery data",
+  "description": "Access to the ChEMBL Database. The ChEMBL Connector gives Claude access to the ChEMBL Database, a manually curated resource of bioactive drug-like compounds with quantitative binding and functional data against biological targets.",
   "author": {
-    "name": "DeepSense.AI",
+    "name": "deepsense.ai",
     "url": "https://deepsense.ai"
   },
   "mcpServers": {
