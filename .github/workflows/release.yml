@@ -21,10 +21,18 @@ jobs:
           zip -r ../single-cell-rna-qc-${GITHUB_REF_NAME}.zip .
           cd ..
 
+      - name: Create instrument-data-to-allotrope skill zip file
+        run: |
+          cd instrument-data-to-allotrope
+          zip -r ../instrument-data-to-allotrope-${GITHUB_REF_NAME}.zip .
+          cd ..
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
-          files: single-cell-rna-qc-*.zip
+          files: |
+            single-cell-rna-qc-*.zip
+            instrument-data-to-allotrope-*.zip
           generate_release_notes: true
           draft: true
           prerelease: false

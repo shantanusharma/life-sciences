@@ -21,6 +21,7 @@ This marketplace provides MCP (Model Context Protocol) servers and skills for li
 
 # Install skills
 /plugin install single-cell-rna-qc@life-sciences
+/plugin install instrument-data-to-allotrope@life-sciences
 ```
 
 For servers requiring authentication (all except PubMed), configure credentials after installation:
@@ -82,6 +83,11 @@ Access 10x Genomics Cloud analysis data and workflows.
 
 Automated quality control workflow for single-cell RNA-seq data following scverse best practices. Performs MAD-based filtering with comprehensive visualizations.
 
+#### Instrument Data to Allotrope
+**Plugin ID**: `instrument-data-to-allotrope@life-sciences`
+
+Convert instrument data to Allotrope Simple Model (ASM) format for standardized data exchange and analysis.
+
 ## Detailed Installation
 
 ### 1. Add the marketplace (one time)
@@ -104,6 +110,7 @@ Automated quality control workflow for single-cell RNA-seq data following scvers
 
 # Skills (no configuration needed)
 /plugin install single-cell-rna-qc@life-sciences
+/plugin install instrument-data-to-allotrope@life-sciences
 ```
 
 ### 3. Configure credentials (if needed)

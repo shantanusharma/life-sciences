@@ -54,6 +54,17 @@
       "skills": [
         "./single-cell-rna-qc"
       ]
+    },
+    {
+      "name": "instrument-data-to-allotrope",
+      "source": "./",
+      "description": "Convert instrument data to Allotrope Simple Model (ASM) format",
+      "category": "life-sciences",
+      "tags": ["data-conversion", "allotrope", "instruments", "standardization"],
+      "strict": false,
+      "skills": [
+        "./instrument-data-to-allotrope"
+      ]
     }
   ]
 }
