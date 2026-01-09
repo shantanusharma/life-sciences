@@ -14,11 +14,16 @@ Quick fixes for common nf-core pipeline issues.
 
 ## Exit Codes
 
+Common exit codes indicating resource issues (per [nf-core docs](https://nf-co.re/docs/usage/troubleshooting/crash_halfway)):
+
 | Code | Cause | Fix |
 |------|-------|-----|
 | 137 | Out of memory | `--max_memory '32.GB'` or `'64.GB'` for WGS |
-| 143 | Timeout | `--max_time '48.h'` |
+| 143 | Out of memory | `--max_memory '32.GB'` or `'64.GB'` for WGS |
+| 104, 134, 139, 247 | Out of memory | Increase `--max_memory` |
 | 1 | General error | Check `.nextflow.log` for details |
+
+Most pipelines auto-retry with 2x then 3x resources before failing.
 
 ## HPC/Singularity Issues
 
