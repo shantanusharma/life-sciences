@@ -15,6 +15,27 @@ This reference provides a consolidated guide for diagnosing and resolving common
 
 ## Data Format Issues
 
+### Issue: CITE-seq protein data from Seurat is CLR-normalized
+
+**Cause**: Seurat's `NormalizeData(normalization.method = "CLR")` transforms raw ADT counts. totalVI requires raw integer counts for protein data.
+
+**Symptoms**:
+- Protein values are not integers
+- Protein values contain negative numbers
+- Model training produces poor results
+
+**Solution**:
+```python
+# Check if protein data is normalized
+protein = adata.obsm["protein_expression"]
+print(f"Min value: {protein.min()}")  # Should be 0 if raw counts
+print(f"Contains integers: {np.allclose(protein, protein.astype(int))}")
+
+# If importing from Seurat, use the raw counts assay, not the normalized one
+# In R/Seurat, export the RNA assay's counts slot, not the data slot
+# GetAssayData(seurat_obj, assay = "ADT", slot = "counts")
+```
+
 ### Issue: "layer not found" or "X should contain integers"
 
 **Cause**: scvi-tools requires raw integer counts, not normalized data.

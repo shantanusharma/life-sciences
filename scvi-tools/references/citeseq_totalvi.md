@@ -71,7 +71,12 @@ adata.uns["protein_names"] = list(adata_protein.var_names)
 
 ```python
 # Standard RNA QC
-adata.var['mt'] = adata.var_names.str.startswith('MT-')
+# Handle both human (MT-) and mouse (mt-, Mt-) mitochondrial genes
+    adata.var['mt'] = (
+        adata.var_names.str.startswith('MT-') |
+        adata.var_names.str.startswith('mt-') |
+        adata.var_names.str.startswith('Mt-')
+    )
 sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
 
 # Filter cells
@@ -105,7 +110,9 @@ for i, name in enumerate(protein_names):
 # Store RNA counts
 adata.layers["counts"] = adata.X.copy()
 
-# Protein is already in obsm as counts
+# Protein must be raw ADT counts (NOT CLR-normalized)
+# WARNING: If importing from Seurat, ensure you use raw counts, not CLR-normalized data
+# Seurat's NormalizeData(normalization.method = "CLR") transforms counts - use the original assay
 ```
 
 ### HVG Selection for RNA
@@ -340,7 +347,12 @@ def analyze_citeseq(
     adata.uns["protein_names"] = list(adata_protein.var_names)
     
     # RNA QC
-    adata.var['mt'] = adata.var_names.str.startswith('MT-')
+    # Handle both human (MT-) and mouse (mt-, Mt-) mitochondrial genes
+    adata.var['mt'] = (
+        adata.var_names.str.startswith('MT-') |
+        adata.var_names.str.startswith('mt-') |
+        adata.var_names.str.startswith('Mt-')
+    )
     sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
     adata = adata[adata.obs['pct_counts_mt'] < 20].copy()
     sc.pp.filter_genes(adata, min_cells=3)

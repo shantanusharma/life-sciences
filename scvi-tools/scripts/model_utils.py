@@ -52,7 +52,12 @@ def prepare_adata(
         adata = adata.copy()
     
     # Calculate QC metrics
-    adata.var['mt'] = adata.var_names.str.startswith('MT-')
+    # Handle both human (MT-) and mouse (mt-, Mt-) mitochondrial gene prefixes
+    adata.var['mt'] = (
+        adata.var_names.str.startswith('MT-') |
+        adata.var_names.str.startswith('mt-') |
+        adata.var_names.str.startswith('Mt-')
+    )
     sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
     
     # Filter cells

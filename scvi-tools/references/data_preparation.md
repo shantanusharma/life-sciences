@@ -51,7 +51,12 @@ sc.pp.filter_cells(adata, min_genes=200)
 sc.pp.filter_cells(adata, max_genes=5000)
 
 # Calculate mito percent if not present
-adata.var['mt'] = adata.var_names.str.startswith('MT-')
+# Handle both human (MT-) and mouse (mt-, Mt-) mitochondrial genes
+adata.var['mt'] = (
+    adata.var_names.str.startswith('MT-') |
+    adata.var_names.str.startswith('mt-') |
+    adata.var_names.str.startswith('Mt-')
+)
 sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
 adata = adata[adata.obs['pct_counts_mt'] < 20].copy()
 
