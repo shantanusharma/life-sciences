@@ -244,6 +244,7 @@ def check_resources() -> CheckResult:
         # Memory
         mem_gb = 0
         try:
+            # Linux: read from /proc/meminfo
             with open('/proc/meminfo', 'r') as f:
                 for line in f:
                     if line.startswith('MemTotal:'):
@@ -251,10 +252,14 @@ def check_resources() -> CheckResult:
                         mem_gb = mem_kb / (1024 * 1024)
                         break
         except (FileNotFoundError, PermissionError):
-            # Try alternative method
+            # macOS: use sysctl
             try:
-                import resource
-                mem_gb = resource.getrlimit(resource.RLIMIT_AS)[0] / (1024**3)
+                result = subprocess.run(
+                    ['sysctl', '-n', 'hw.memsize'],
+                    capture_output=True, text=True, timeout=5
+                )
+                if result.returncode == 0:
+                    mem_gb = int(result.stdout.strip()) / (1024**3)
             except:
                 pass
 
