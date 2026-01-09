@@ -22,7 +22,7 @@ This marketplace provides MCP (Model Context Protocol) servers and skills for li
 # Install skills
 /plugin install single-cell-rna-qc@life-sciences
 /plugin install instrument-data-to-allotrope@life-sciences
-/plugin install nf-core@life-sciences
+/plugin install nextflow-development@life-sciences
 ```
 
 For servers requiring authentication (all except PubMed), configure credentials after installation:
@@ -89,8 +89,8 @@ Automated quality control workflow for single-cell RNA-seq data following scvers
 
 Convert instrument data to Allotrope Simple Model (ASM) format for standardized data exchange and analysis.
 
-#### nf-core Pipeline Deployment
-**Plugin ID**: `nf-core@life-sciences`
+#### Nextflow Development
+**Plugin ID**: `nextflow-development@life-sciences`
 
 Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on local or public GEO/SRA sequencing data. Designed for bench scientists who need to run large-scale omics analyses without specialized bioinformatics training.
 
@@ -130,7 +130,7 @@ Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on local or public
 # Skills (no configuration needed)
 /plugin install single-cell-rna-qc@life-sciences
 /plugin install instrument-data-to-allotrope@life-sciences
-/plugin install nf-core@life-sciences
+/plugin install nextflow-development@life-sciences
 ```
 
 ### 3. Configure credentials (if needed)
