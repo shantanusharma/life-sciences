@@ -122,6 +122,17 @@
       "skills": [
         "./scvi-tools"
       ]
+    },
+    {
+      "name": "clinical-trial-protocol",
+      "source": "./",
+      "description": "Generate FDA/NIH-compliant clinical trial protocols for medical devices or drugs",
+      "category": "life-sciences",
+      "tags": ["clinical-trials", "fda", "protocol", "regulatory"],
+      "strict": false,
+      "skills": [
+        "./clinical-trial-protocol-skill"
+      ]
     }
   ]
 }
