@@ -52,18 +52,14 @@ def prepare_data(
     """
     import scanpy as sc
     import numpy as np
+    from model_utils import get_mito_genes
 
     adata = adata.copy()
     print(f"Input: {adata.shape[0]} cells, {adata.shape[1]} genes")
 
     if not skip_filter:
         # Calculate QC metrics
-        # Handle both human (MT-) and mouse (mt-, Mt-) mitochondrial gene prefixes
-        adata.var['mt'] = (
-            adata.var_names.str.startswith('MT-') |
-            adata.var_names.str.startswith('mt-') |
-            adata.var_names.str.startswith('Mt-')
-        )
+        adata.var['mt'] = get_mito_genes(adata)
         sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
 
         # Filter cells

@@ -12,6 +12,25 @@ from typing import Optional, List, Dict, Tuple
 import warnings
 
 
+def get_mito_genes(adata) -> np.ndarray:
+    """
+    Identify mitochondrial genes for both human and mouse data.
+
+    Handles common prefixes:
+    - Human: MT- (e.g., MT-CO1, MT-ND1)
+    - Mouse: mt- or Mt- (e.g., mt-Co1, Mt-Nd1)
+
+    Returns
+    -------
+    Boolean array indicating mitochondrial genes
+    """
+    return (
+        adata.var_names.str.startswith('MT-') |
+        adata.var_names.str.startswith('mt-') |
+        adata.var_names.str.startswith('Mt-')
+    )
+
+
 def prepare_adata(
     adata,
     batch_key: Optional[str] = None,
@@ -52,12 +71,7 @@ def prepare_adata(
         adata = adata.copy()
     
     # Calculate QC metrics
-    # Handle both human (MT-) and mouse (mt-, Mt-) mitochondrial gene prefixes
-    adata.var['mt'] = (
-        adata.var_names.str.startswith('MT-') |
-        adata.var_names.str.startswith('mt-') |
-        adata.var_names.str.startswith('Mt-')
-    )
+    adata.var['mt'] = get_mito_genes(adata)
     sc.pp.calculate_qc_metrics(adata, qc_vars=['mt'], inplace=True)
     
     # Filter cells
