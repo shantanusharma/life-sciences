@@ -100,6 +100,17 @@
       "skills": [
         "./instrument-data-to-allotrope"
       ]
+    },
+    {
+      "name": "nf-core",
+      "source": "./",
+      "description": "Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on local or public GEO/SRA sequencing data",
+      "category": "life-sciences",
+      "tags": ["bioinformatics", "nextflow", "pipelines", "rna-seq", "variant-calling", "atac-seq", "genomics"],
+      "strict": false,
+      "skills": [
+        "./nf-core"
+      ]
     }
   ]
 }
