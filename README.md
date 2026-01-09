@@ -23,6 +23,7 @@ This marketplace provides MCP (Model Context Protocol) servers and skills for li
 /plugin install single-cell-rna-qc@life-sciences
 /plugin install instrument-data-to-allotrope@life-sciences
 /plugin install nextflow-development@life-sciences
+/plugin install scvi-tools@life-sciences
 ```
 
 For servers requiring authentication (all except PubMed), configure credentials after installation:
@@ -107,6 +108,11 @@ Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on local or public
 
 **Requirements**: Docker and Nextflow installed locally
 
+#### scvi-tools
+**Plugin ID**: `scvi-tools@life-sciences`
+
+Deep learning toolkit for single-cell omics analysis using scvi-tools. Includes model selection guidance, training workflows, and integration pipelines for scVI, scANVI, totalVI, PeakVI, MultiVI, and more.
+
 ## Detailed Installation
 
 ### 1. Add the marketplace (one time)
@@ -131,6 +137,7 @@ Run nf-core bioinformatics pipelines (rnaseq, sarek, atacseq) on local or public
 /plugin install single-cell-rna-qc@life-sciences
 /plugin install instrument-data-to-allotrope@life-sciences
 /plugin install nextflow-development@life-sciences
+/plugin install scvi-tools@life-sciences
 ```
 
 ### 3. Configure credentials (if needed)

@@ -27,12 +27,19 @@ jobs:
           zip -r ../instrument-data-to-allotrope-${GITHUB_REF_NAME}.zip .
           cd ..
 
+      - name: Create scvi-tools skill zip file
+        run: |
+          cd scvi-tools
+          zip -r ../scvi-tools-${GITHUB_REF_NAME}.zip .
+          cd ..
+
       - name: Create Release
         uses: softprops/action-gh-release@v1
         with:
           files: |
             single-cell-rna-qc-*.zip
             instrument-data-to-allotrope-*.zip
+            scvi-tools-*.zip
           generate_release_notes: true
           draft: true
           prerelease: false

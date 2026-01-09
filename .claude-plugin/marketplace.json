@@ -111,6 +111,17 @@
       "skills": [
         "./nextflow-development"
       ]
+    },
+    {
+      "name": "scvi-tools",
+      "source": "./",
+      "description": "Deep learning toolkit for single-cell omics analysis using scvi-tools",
+      "category": "life-sciences",
+      "tags": ["bioinformatics", "single-cell", "deep-learning", "scvi-tools", "integration"],
+      "strict": false,
+      "skills": [
+        "./scvi-tools"
+      ]
     }
   ]
 }
