@@ -1,0 +1,5 @@
+sample,fastq_1,fastq_2,replicate
+CONTROL,/path/to/control_rep1_R1.fastq.gz,/path/to/control_rep1_R2.fastq.gz,1
+CONTROL,/path/to/control_rep2_R1.fastq.gz,/path/to/control_rep2_R2.fastq.gz,2
+TREATMENT,/path/to/treatment_rep1_R1.fastq.gz,/path/to/treatment_rep1_R2.fastq.gz,1
+TREATMENT,/path/to/treatment_rep2_R1.fastq.gz,/path/to/treatment_rep2_R2.fastq.gz,2

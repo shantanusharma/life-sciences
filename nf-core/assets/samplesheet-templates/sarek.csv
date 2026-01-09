@@ -1,0 +1,5 @@
+patient,sample,lane,fastq_1,fastq_2
+patient1,tumor,L001,/path/to/patient1_tumor_R1.fastq.gz,/path/to/patient1_tumor_R2.fastq.gz
+patient1,normal,L001,/path/to/patient1_normal_R1.fastq.gz,/path/to/patient1_normal_R2.fastq.gz
+patient2,tumor,L001,/path/to/patient2_tumor_R1.fastq.gz,/path/to/patient2_tumor_R2.fastq.gz
+patient2,normal,L001,/path/to/patient2_normal_R1.fastq.gz,/path/to/patient2_normal_R2.fastq.gz
