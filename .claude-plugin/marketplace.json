@@ -6,7 +6,7 @@
   },
   "metadata": {
     "version": "1.0.0",
-    "description": "MCP servers for life sciences research tools including 10x Genomics, PubMed, BioRender, Synapse, and Wiley Scholar Gateway"
+    "description": "MCP servers for life sciences research tools including 10x Genomics, PubMed, BioRender, Synapse, Wiley Scholar Gateway, bioRxiv, Clinical Trials, ChEMBL, Owkin, and Open Targets"
   },
   "plugins": [
     {
@@ -43,6 +43,41 @@
       "description": "Scholar Gateway MCP server by Wiley for accessing academic research and publications",
       "category": "life-sciences",
       "tags": ["research", "academic", "publications"]
+    },
+    {
+      "name": "biorxiv",
+      "source": "./biorxiv",
+      "description": "Access to bioRxiv and medRxiv preprint data",
+      "category": "life-sciences",
+      "tags": ["research", "preprints", "biology", "medical"]
+    },
+    {
+      "name": "clinical-trials",
+      "source": "./clinical-trials",
+      "description": "Access ClinicalTrials.gov data",
+      "category": "life-sciences",
+      "tags": ["clinical-trials", "research", "medical", "fda"]
+    },
+    {
+      "name": "chembl",
+      "source": "./chembl",
+      "description": "Access to the ChEMBL Database",
+      "category": "life-sciences",
+      "tags": ["drug-discovery", "chemistry", "bioactive-molecules", "bioactivity"]
+    },
+    {
+      "name": "owkin",
+      "source": "./owkin",
+      "description": "Interact with AI agents built for biology",
+      "category": "life-sciences",
+      "tags": ["ai", "drug-discovery", "precision-medicine", "histopathology"]
+    },
+    {
+      "name": "open-targets",
+      "source": "./open-targets",
+      "description": "Drug target discovery and prioritisation platform",
+      "category": "life-sciences",
+      "tags": ["drug-targets", "genomics", "research", "therapeutics"]
     },
     {
       "name": "single-cell-rna-qc",
