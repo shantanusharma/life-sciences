@@ -250,13 +250,7 @@ grep "Pipeline completed successfully" .nextflow.log
 
 ## Quick Reference
 
-### Common exit codes
-
-| Code | Cause | Fix |
-|------|-------|-----|
-| 137 | Out of memory | `--max_memory '64.GB'` |
-| 143 | Timeout | `--max_time '48.h'` |
-| 1 | Container pull failed | Check network; try `-profile singularity` |
+For common exit codes and fixes, see [references/troubleshooting.md](references/troubleshooting.md).
 
 ### Resume failed run
 
@@ -274,18 +268,6 @@ nextflow run nf-core/<pipeline> -resume
 - [references/pipelines/rnaseq.md](references/pipelines/rnaseq.md) - RNA-seq pipeline details
 - [references/pipelines/sarek.md](references/pipelines/sarek.md) - Variant calling details
 - [references/pipelines/atacseq.md](references/pipelines/atacseq.md) - ATAC-seq details
-
----
-
-## Adding New Pipelines
-
-To add support for a new nf-core pipeline:
-
-1. Create config: `scripts/config/pipelines/<pipeline>.yaml`
-2. Add samplesheet template: `assets/samplesheet-templates/<pipeline>.csv`
-3. Create reference doc: `references/pipelines/<pipeline>.md`
-
-See existing configs for schema format.
 
 ---
 

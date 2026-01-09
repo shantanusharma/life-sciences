@@ -289,17 +289,17 @@ Then return to the main SKILL.md workflow (Step 1: Environment Check) to proceed
 
 ## Supported Pipelines
 
-The skill auto-detects appropriate pipelines based on library strategy:
+The skill auto-detects appropriate pipelines based on library strategy. Pipelines marked with ★ are fully supported with configs, samplesheet generation, and documentation. Others are suggested but require manual setup following nf-core documentation.
 
-| Library Strategy | Suggested Pipeline |
-|------------------|--------------------|
-| RNA-Seq          | nf-core/rnaseq     |
-| ATAC-seq         | nf-core/atacseq    |
-| ChIP-seq         | nf-core/chipseq    |
-| WGS/WXS          | nf-core/sarek      |
-| Bisulfite-Seq    | nf-core/methylseq  |
-| miRNA-Seq        | nf-core/smrnaseq   |
-| Amplicon         | nf-core/ampliseq   |
+| Library Strategy | Suggested Pipeline | Support |
+|------------------|--------------------|---------|
+| RNA-Seq          | nf-core/rnaseq     | ★ Full  |
+| ATAC-seq         | nf-core/atacseq    | ★ Full  |
+| WGS/WXS          | nf-core/sarek      | ★ Full  |
+| ChIP-seq         | nf-core/chipseq    | Manual  |
+| Bisulfite-Seq    | nf-core/methylseq  | Manual  |
+| miRNA-Seq        | nf-core/smrnaseq   | Manual  |
+| Amplicon         | nf-core/ampliseq   | Manual  |
 
 ---
 
