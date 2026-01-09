@@ -10,7 +10,7 @@ This marketplace provides MCP (Model Context Protocol) servers and skills for li
 
 ```bash
 # Add the marketplace
-/plugin marketplace add https://github.com/anthropics/life-sciences.git
+/plugin marketplace add anthropics/life-sciences
 
 # Install MCP servers
 /plugin install pubmed@life-sciences
