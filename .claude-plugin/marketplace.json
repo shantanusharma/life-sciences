@@ -6,7 +6,7 @@
   },
   "metadata": {
     "version": "1.0.0",
-    "description": "MCP servers for life sciences research tools including 10x Genomics, PubMed, BioRender, Synapse, Wiley Scholar Gateway, bioRxiv, Clinical Trials, ChEMBL, Owkin, and Open Targets"
+    "description": "MCP servers and skills for life sciences research, data analysis, and discovery"
   },
   "plugins": [
     {
@@ -133,6 +133,20 @@
       "skills": [
         "./clinical-trial-protocol-skill"
       ]
+    },
+    {
+      "name": "tooluniverse",
+      "source": "./tooluniverse",
+      "description": "Democratizing AI scientists with ToolUniverse - AI agents and tools for scientific discovery and automation",
+      "category": "life-sciences",
+      "tags": ["ai-agents", "science", "tool-use", "reasoning", "automation"]
+    },
+    {
+      "name": "medidata",
+      "source": "./medidata",
+      "description": "Medidata's MCP Connector for Claude with Platform Help and Predictive Site Ranking for clinical trials",
+      "category": "life-sciences",
+      "tags": ["clinical-trials", "site-ranking", "trial-planning", "medidata"]
     }
   ]
 }
